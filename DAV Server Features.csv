@@ -1,0 +1,42 @@
+FEATURE/EXTENSION,DESCRIPTION,REFERENCE DOCUMENT,SERVERS,,,
+,,,Apple,AOL,Bedework,CMU Cyrus
+,,,,,,
+WebDAV,,,,,,
+1,Class 1: Base WebDAV,RFC4918,X,X,X,X
+2,Class 2: Support for locks,RFC4918,,X,,X
+3,Class 3: Revisions to WebDAV,RFC4918,,X,,X
+access-control,Access control extensions,RFC3744,X,X,X,X
+extended-mkcol,MKCOL with request body to set properties,RFC5689,X,X,,X
+version-control,Revision control extensions,RFC3253,,X,,
+,,,,,,
+Additional WebDAV Features,,,,,,
+add-member,Using POST to add members to collections,RFC5995,,,,X
+quota,Collection quotas,RFC4331,,,,X
+sync-collection,Collection synchronization report,RFC6578,,,X,X
+,,,,,,
+CalDAV,,,,,,
+calendar-access,Base CalDAV,RFC4791,,X,X,X
+calendar-auto-schedule,Scheduling extensions,RFC6638,,,X,X
+calendar-availability,VAVAILABILITY component,draft-daboo-calendar-availability,X,,,X
+calendar-managed-attachments,Managed attachments,draft-daboo-caldav-attachments,X,,,X
+calendar-managed-attachments-no-recurrence,No per-recurrence managed attachments,,,,,X
+calendar-no-timezone,Timezones by reference,draft-ietf-tzdist-caldav-timezone-ref,X,,,X
+calendar-query-extended,Extended calendar query report,draft-daboo-caldav-extensions,X,,,
+calendar-schedule,Scheduling extensions (deprecated),draft-desruisseaux-caldav-sched-04,X,,,
+,,,,,,
+Private CalDAV Extensions,,,,,,
+calendarserver-sharing,Calendar sharing,http://svn.calendarserver.org/repository/calendarserver/CalendarServer/trunk/doc/Extensions/caldav-sharing.txt,X,X,,
+calendarserver-sharing-no-scheduling,No scheduling of shared calendars,,X,,,
+,,,,,,
+Additional Calendaring Features,,,,,,
+jCal,JSON format for iCalendar,RFC7265,,,,X
+xCal,XML format for iCalendar,RFC6321,X,,X,X
+VPOLL,Consensus scheduling component,draft-york-vpoll,X,,X,X
+RSCALE,Non-Gregorian recurrence rules,draft-ietf-calext-rscale,,,,X
+,Unicode Consortium CLDR calendars,http://www.unicode.org/repos/cldr/tags/latest/common/bcp47/calendar.xml,,,,X
+iMIP,Email-based scheduling,RFC6047,,,,X
+iSchedule,Server-to-server scheduling,draft-desruisseaux-ischedule,X,,X,X
+Tzdist,Time zone distribution service,draft-ietf-tzdist-service,,,,X
+,,,,,,
+CardDAV,,,,,,
+addressbook,Base CardDAV,RFC6352,X,,,X
