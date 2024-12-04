@@ -1,0 +1,401 @@
+= DAV Server Features
+
+Last updated: Oct 16, 2015
+
+== Purpose
+
+This document is intended to provide a summary of the features and extensions
+supported by various DAV servers.
+
+It is not intended to be a comprehensive list of all features, but rather a
+summary of the most common and important features.
+
+== Contributors
+
+* @arnaudq (Oracle Calendar)
+* @corneliudobrota (1&1)
+* @ksmurchison (Apple, AOL, Bedework, Cyrus)
+
+== WebDAV
+
+[cols="4,4,1,1,1,1,1,1"]
+|===
+|Feature/Extension |Description |Apple |AOL |Bedework |Cyrus |1&1 |Oracle
+
+|link:http://tools.ietf.org/html/rfc4918[Class 1]
+|Base WebDAV
+|X
+|X
+|X
+|X
+|X
+|X
+
+|link:http://tools.ietf.org/html/rfc4918[Class 2]
+|Locking
+|
+|X
+|
+|X
+|
+|
+
+|link:http://tools.ietf.org/html/rfc4918[Class 3]
+|RFC4918 revisions
+|
+|X
+|
+|X
+|
+|X
+
+|link:http://tools.ietf.org/html/rfc3744[access-control]
+|Access control extensions
+|X
+|X
+|X
+|X
+|X
+|X
+
+|link:http://tools.ietf.org/html/rfc5689[extended-mkcol]
+|Make collection with resource-type/properties
+|X
+|X
+|
+|X
+|
+|X
+
+|link:http://tools.ietf.org/html/rfc3253[version-control]
+|Revision control extensions
+|
+|X
+|
+|
+|
+|
+|===
+
+== Additional WebDAV Features
+
+[cols="4,4,1,1,1,1,1,1"]
+|===
+|Feature/Extension |Description |Apple |AOL |Bedework |Cyrus |1&1 |Oracle
+
+|link:http://tools.ietf.org/html/rfc5995[add-member]
+|Using POST to add members to collections
+|
+|
+|
+|X
+|
+|
+
+|link:http://tools.ietf.org/html/rfc4331[quota]
+|Collection quotas
+|
+|
+|
+|X
+|
+|
+
+|link:http://tools.ietf.org/html/rfc6578[sync-collection]
+|Collection synchronization report
+|
+|
+|X
+|X
+|
+|X
+|===
+
+== CalDAV
+
+[cols="4,4,1,1,1,1,1,1"]
+|===
+|Feature/Extension |Description |Apple |AOL |Bedework |Cyrus |1&1 |Oracle
+
+|link:http://tools.ietf.org/html/rfc4791[calendar-access]
+|Base CalDAV
+|
+|X
+|X
+|X
+|X
+|X
+
+|link:http://tools.ietf.org/html/rfc6638[calendar-auto-schedule]
+|Scheduling extensions
+|
+|
+|X
+|X
+|
+|X
+
+|link:https://tools.ietf.org/html/draft-daboo-calendar-availability[calendar-availability]
+|VAVAILABILITY extensions
+|X
+|
+|
+|X
+|
+|
+
+|link:https://tools.ietf.org/html/draft-daboo-valarm-extensions[calendar-default-alarms]
+|Default alarms
+|X
+|
+|
+|
+|
+|
+
+|link:https://tools.ietf.org/html/draft-daboo-caldav-attachments[calendar-managed-attachments]
+|Managed attachments
+|X
+|
+|
+|X
+|
+|X
+
+|link:https://tools.ietf.org/html/draft-daboo-caldav-attachments[calendar-managed-attachments-no-recurrence]
+|No per-recurrence managed attachments
+|
+|
+|
+|X
+|
+|
+
+|link:http://tools.ietf.org/html/draft-ietf-tzdist-caldav-timezone-ref[calendar-no-timezone]
+|Timezones by reference
+|X
+|
+|
+|X
+|
+|
+
+|link:http://svn.calendarserver.org/repository/calendarserver/CalendarServer/trunk/doc/Extensions/caldav-proxy.txt[calendar-proxy]
+|Calendar user proxy functionality
+|X
+|
+|
+|
+|
+|X
+
+|link:https://tools.ietf.org/html/draft-daboo-caldav-extensions[calendar-query-extended]
+|Extended calendar query report
+|X
+|
+|
+|
+|
+|
+
+|link:https://tools.ietf.org/html/draft-desruisseaux-caldav-sched-04[calendar-schedule]
+|Scheduling extensions (deprecated)
+|X
+|
+|
+|
+|
+|X
+|===
+
+== Private CalDAV Extensions
+
+[cols="4,4,1,1,1,1,1,1"]
+|===
+|Feature/Extension |Description |Apple |AOL |Bedework |Cyrus |1&1 |Oracle
+
+|calendarserver-home-sync
+|
+|X
+|
+|
+|
+|
+|
+
+|calendarserver-partstat-changes
+|
+|X
+|
+|
+|
+|
+|
+
+|calendarserver-principal-property-search
+|
+|X
+|
+|
+|
+|
+|X
+
+|calendarserver-principal-search
+|
+|X
+|
+|
+|
+|
+|X
+
+|link:http://svn.calendarserver.org/repository/calendarserver/CalendarServer/trunk/doc/Extensions/caldav-privatecomments.txt[calendarserver-private-comments]
+|Private attendee comments
+|X
+|
+|
+|
+|
+|
+
+|link:http://svn.calendarserver.org/repository/calendarserver/CalendarServer/trunk/doc/Extensions/caldav-privateevents.txt[calendarserver-private-events]
+|Private calendar components
+|X
+|
+|
+|
+|
+|X
+
+|link:http://svn.calendarserver.org/repository/calendarserver/CalendarServer/trunk/doc/Extensions/caldav-recursplit.txt[calendarserver-recurrence-split]
+|Smart splitting of recurring events
+|X
+|
+|
+|
+|
+|
+
+|link:http://svn.calendarserver.org/repository/calendarserver/CalendarServer/trunk/doc/Extensions/caldav-sharing.txt[calendarserver-sharing]
+|Calendar sharing
+|X
+|X
+|
+|
+|
+|
+
+|calendarserver-sharing-no-scheduling
+|No scheduling of shared calendars
+|X
+|
+|
+|
+|
+|
+
+|inbox-availability
+|Store VAVAILABILITY on Inbox
+|X
+|
+|
+|X
+|
+|
+|===
+
+== Additional Calendaring Features
+
+[cols="4,4,1,1,1,1,1,1"]
+|===
+|Feature/Extension |Description |Apple |AOL |Bedework |Cyrus |1&1 |Oracle
+
+|link:http://tools.ietf.org/html/rfc6047[iMIP]
+|Email-based scheduling
+|
+|
+|
+|X
+|X
+|X
+
+|link:https://tools.ietf.org/html/draft-desruisseaux-ischedule[iSchedule]
+|Server-to-server scheduling
+|X
+|
+|X
+|X
+|
+|X
+
+|link:http://tools.ietf.org/html/rfc7265[jCal]
+|JSON format for iCalendar
+|
+|
+|
+|X
+|
+|
+
+|link:http://tools.ietf.org/html/rfc6231[xCal]
+|XML format for iCalendar
+|X
+|
+|X
+|X
+|
+|
+
+|link:https://tools.ietf.org/html/draft-york-vpoll[VPOLL]
+|Consensus scheduling component
+|X
+|
+|X
+|X
+|
+|
+
+|link:https://tools.ietf.org/html/draft-ietf-calext-rscale[RSCALE]
+|Non-Gregorian recurrence rules
+|
+|
+|
+|X
+|
+|
+
+|
+|link:http://www.unicode.org/repos/cldr/tags/latest/common/bcp47/calendar.xml[Unicode Consortium CLDR calendars]
+|
+|
+|
+|X
+|
+|
+
+|link:http://tools.ietf.org/html/draft-ietf-tzdist-service[TZdist]
+|Time zone distribution service
+|
+|
+|
+|X
+|
+|
+|===
+
+== CardDAV
+
+[cols="4,4,1,1,1,1,1,1"]
+|===
+|Feature/Extension |Description |Apple |AOL |Bedework |Cyrus |1&1 |Oracle
+
+|link:http://tools.ietf.org/html/rfc6253[addressbook]
+|Base CardDAV
+|X
+|
+|
+|X
+|X
+|X
+|===
